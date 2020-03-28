@@ -30,6 +30,28 @@ const data = React.useMemo(
   []
 )
 ```
+You can have React component for each cell in a row by passing a react component in the data array
+
+```javascript
+const data = React.useMemo(
+  () => [
+    {
+      col1: <Fragment id={"id"}>'Hello'</Fragment>,
+      col2: 'World',
+    },
+    {
+      col1: <Fragment id={"id"}>'React Table'</Fragment>,
+      col2: 'rocks',
+    },
+    {
+      col1: <Fragment id={"id"}>'whatever'</Fragment>,
+      col2: 'you want',
+    },
+  ],
+  []
+)
+```
+
 
 ## Define Columns
 
