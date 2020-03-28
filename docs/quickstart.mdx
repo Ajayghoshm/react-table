@@ -41,15 +41,18 @@ const columns = React.useMemo(
     {
       Header: 'Column 1',
       accessor: 'col1', // accessor is the "key" in the data
+      Cell:(props)=>(<Fragment>{props.cell.value}</Fragment>) // Wrapper Component
     },
     {
       Header: 'Column 2',
       accessor: 'col2',
+      Cell:(props)=>(<Fragment>{props.cell.value}</Fragment>)
     },
   ],
   []
 )
 ```
+We can have a wrapper component for all cells in a Column
 
 ## Implement `useTable` hook
 
